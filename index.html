@@ -1,279 +1,436 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Pagina  | Joel Emmanuel Tovar Gomez</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juventud & Derecho - Sitio Oficial Joel</title>
+	    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
         <style>
-            :root {
-                --primary-blue: #007bff;
-                --dark-blue: #002d5b;
-            }
+    <style>
+        /* --- ESTILOS GENERALES Y RESET --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-            body {
-                font-family: 'Poppins', sans-serif;
-                overflow-x: hidden;
-            }
+        html {
+            scroll-behavior: smooth; /* Hace que el salto entre secciones sea suave */
+        }
 
-            /* Navbar moderna */
-            .navbar {
-                background: rgba(255,255,255,0.95);
-                shadow: 0 2px 10px rgba(0,0,0,0.1);
-            }
-            .nav-link {
-                color: #333 !important;
-                font-weight: 500;
-            }
-
-            /* Hero Section */
-            .hero-section {
-                background: linear-gradient(135deg, #002d5b 0%, #007bff 100%);
-                color: white;
-                padding: 120px 0 60px;
-                clip-path: ellipse(150% 100% at 50% 0%);
-            }
-
-            /* Tarjetas de Precios */
-            .pricing-card {
-                border: none;
-                border-radius: 15px;
-                transition: transform 0.3s ease;
-                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            }
-            .pricing-card:hover {
-                transform: translateY(-10px);
-            }
-
-            .btn-action {
-                border-radius: 50px;
-                padding: 10px 25px;
-                font-weight: 600;
-                text-transform: uppercase;
-            }
-
-            /* Footer */
-            .footer {
-                background: #1a1a1a;
-                color: white;
-                padding: 40px 0;
-            }
-
-            /* Ajuste para imágenes de iconos */
-            .services-icon i {
-                font-size: 3rem;
-                color: var(--primary-blue);
-            }
-        </style>
-        <style>
-            :root {
-                --primary-blue: #007bff;
-                --glass-bg: rgba(255, 255, 255, 0.15);
-                --glass-border: rgba(255, 255, 255, 0.2);
-            }
-
-            body {
-                font-family: 'Poppins', sans-serif;
-                background-color: #f4f7f9;
-                overflow-x: hidden;
-            }
-
-            /* --- CONTENEDOR DE VIDEO DE FONDO --- */
-            .video-hero {
-                position: relative;
-                height: 100vh;
-                width: 100%;
-                overflow: hidden;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: white;
-            }
-
-            #bg-video {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                min-width: 100%;
-                min-height: 100%;
-                width: auto;
-                height: auto;
-                z-index: -2;
-                transform: translate(-50%, -50%);
-                object-fit: cover; /* Asegura que el video cubra todo el espacio */
-            }
-
-            /* Capa de superposición para que el texto sea legible */
-            .video-overlay {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: rgba(0, 20, 50, 0.5); /* Tinte azul oscuro transparente */
-                z-index: -1;
-            }
-
-            /* --- ESTILO GLASSMORPHISM --- */
-            .glass-card {
-                background: rgba(255, 255, 255, 0.9);
-                backdrop-filter: blur(8px);
-                border: 1px solid var(--glass-border);
-                border-radius: 20px;
-                transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            }
-
-            .glass-card:hover {
-                transform: scale(1.05) translateY(-10px);
-                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-            }
-
-            .btn-animated {
-                border-radius: 50px;
-                padding: 12px 35px;
-                font-weight: 600;
-                transition: all 0.3s ease;
-                text-transform: uppercase;
-            }
-
-            .btn-animated:hover {
-                letter-spacing: 1px;
-                transform: translateY(-3px);
-                box-shadow: 0 10px 20px rgba(0, 123, 255, 0.3);
-            }
-
-            /* Iconos con rotación */
-            .icon-circle {
-                width: 70px;
-                height: 70px;
-                background: var(--primary-blue);
-                color: white;
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 1.8rem;
-                margin: 0 auto 15px;
-                transition: 0.6s ease;
-            }
-
-            .glass-card:hover .icon-circle {
-                transform: rotateY(360deg);
-            }
-        </style>
-		<style>
-        /* Fondo con degradado sutil */
         body {
-            background: #f8f9fa;
-        }
-        
-        /* Tarjeta de perfil */
-        .profile-card {
-            border: none;
-            border-radius: 20px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .profile-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f9fc;
+            color: #333;
         }
 
-        /* Icono principal con degradado de Instagram */
-        .insta-gradient-text {
-            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        /* --- MENÚ LATERAL FIJO --- */
+        .sidebar {
+            height: 100vh;
+            width: 260px;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            background-color: #111827; /* Gris oscuro/azul noche */
+            padding-top: 40px;
+            overflow-y: auto;
         }
 
-        /* Botón personalizado estilo Instagram */
-        .btn-instagram {
-            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        .sidebar-title {
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 0 25px 30px 25px;
+            text-align: center;
+            border-bottom: 1px solid #1f2937;
+            margin-bottom: 20px;
+        }
+
+        .sidebar a {
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 17px;
+            color: #9ca3af;
+            display: block;
+            transition: all 0.2s ease;
+        }
+
+        .sidebar a:hover {
+            color: #ffffff;
+            background-color: #1f2937;
+            padding-left: 35px;
+        }
+
+        /* --- CONTENIDO PRINCIPAL --- */
+        .main-content {
+            margin-left: 260px; /* Desplaza el contenido para no tapar el menú */
+            padding: 0;
+        }
+
+        /* Estilo base para cada sección de la página */
+        section {
+            padding: 80px 40px;
+            min-height: 60vh;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            color: #111827;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: #4f46e5; /* Detalle morado/azul debajo del título */
+            margin-top: 10px;
+            border-radius: 2px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #4b5563;
+            margin-bottom: 20px;
+        }
+
+        /* --- SECCIÓN 1: INICIO (HERO) --- */
+        #inicio {
+            background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
             color: white;
-            border: none;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+        }
+
+        #inicio h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+        }
+
+        #inicio p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* --- SECCIÓN 2: SERVICIOS (Tarjetas) --- */
+        #servicios {
+            background-color: #ffffff;
+        }
+
+        .grid-servicios {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .card-servicio {
+            background: #f9fafb;
+            padding: 30px;
+            border-radius: 8px;
+            border-top: 4px solid #4f46e5;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        .card-servicio h3 {
+            color: #111827;
+            margin-bottom: 12px;
+            font-size: 1.3rem;
+        }
+
+        /* --- SECCIÓN 3: PORTAFOLIO (Episodios del Podcast) --- */
+        #portafolio {
+            background-color: #f3f4f6;
+        }
+
+        .grid-portafolio {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .podcast-item {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .podcast-cover {
+            background: #374151;
+            height: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .podcast-body {
+            padding: 20px;
+        }
+
+        .podcast-body h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        /* --- SECCIÓN 4: CONTACTO (Formulario funcional visualmente) --- */
+        #contacto {
+            background-color: #ffffff;
+        }
+
+        .contacto-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .form-grupo {
+            margin-bottom: 20px;
+        }
+
+        .form-grupo label {
+            display: block;
             font-weight: 600;
-            transition: opacity 0.2s ease;
+            margin-bottom: 8px;
+            color: #374151;
         }
-        .btn-instagram:hover {
-            opacity: 0.9;
+
+        .form-grupo input, .form-grupo textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .form-grupo input:focus, .form-grupo textarea:focus {
+            border-color: #4f46e5;
+        }
+
+        .btn-enviar {
+            background-color: #4f46e5;
             color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.2s;
         }
+
+        .btn-enviar:hover {
+            background-color: #3730a3;
+        }
+
+        .info-contacto h3 {
+            margin-bottom: 15px;
+        }
+
+        /* Sección destacada final */
+        .highlight-box {
+            background-color: #ecfdf5;
+            border-left: 5px solid #10b981;
+            padding: 25px;
+            border-radius: 0 8px 8px 0;
+            margin-top: 30px;
+        }
+
+        .highlight-box h4 {
+            color: #065f46;
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+        }
+
+        .highlight-box p {
+            color: #047857;
+            margin-bottom: 0;
+        }
+
+        footer {
+            background-color: #111827;
+            color: #9ca3af;
+            text-align: center;
+            padding: 25px;
+            font-size: 0.9rem;
+        }
+
+        /* Ajustes para pantallas de celulares */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 70px;
+            }
+            .sidebar-title, .sidebar a span {
+                display: none; /* Oculta el texto en móviles dejando solo emojis */
+            }
+            .sidebar a {
+                text-align: center;
+                font-size: 22px;
+            }
+            .main-content {
+                margin-left: 70px;
+            }
+            section {
+                padding: 60px 20px;
+            }
+            #inicio h1 {
+                font-size: 2.2rem;
+            }
+        }
+		
+		  
     </style>
-    </head>
-    <body>
-	
-	 <header class="video-hero">
-            <video autoplay muted loop playsinline id="bg-video">
-                <source src="videos/devices.mp4" type="video/mp4">
-                Tu navegador no soporta video.
-            </video>
+</head>
+<body>
 
-            <div class="video-overlay"></div>
+    <!-- MENÚ LATERAL FIJO -->
+    <nav class="sidebar">
+        <div class="sidebar-title">Juventud & Derecho Joel Comunidades Virtuales</div>
+        <a href="#inicio">🏠 <span>Inicio</span></a>
+        <a href="#servicios">💼 <span>Podcast</span></a>
+        <a href="#portafolio">📂 <span>Youtube</span></a>
+        <a href="#contacto">📞 <span>Contacto</span></a>
+    </nav>
 
-            <div class="container text-center">
-                <h1 class="display-1 fw-bold mb-3" data-aos="zoom-out" data-aos-duration="1200">JOEL-> CASI ADULTOS</h1>
-                <p class="lead fs-2 mb-5" data-aos="fade-up" data-aos-delay="400" style="color: #00b4d8; font-size: 1.8rem; font-weight: 300; transition: color 0.4s, opacity 0.4s;">
-                    EL PODCAST DERECHO DE LOS JOVENES
-                </p>
-				  <p class="lead mb-5">Desde cero hasta experto. Sitio de aprendizaje Derecho de los Jovenes  <i>Learning velocity</i> .</p>
-                <div data-aos="fade-up" data-aos-delay="800">
-                    <a href="https://open.spotify.com/episode/0Cl8Jw7mexyLNRar4KFDNt?si=11MZljazQWehXI11od5SDg" class="btn btn-primary btn-lg btn-animated me-2">Presentación-encuadre reflexivo</a>
-                    <a href="#contacto" class="btn btn-outline-light btn-lg btn-animated">Audios</a>
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="main-content">
+        
+        <!-- SECCIÓN: INICIO -->
+        <section id="inicio">
+            <div class="container">
+                <h1>Podcast - Derecho de los Jóvenes</h1>
+                <p>Comunidades Virtuales.</p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: SERVICIOS -->
+        <section id="servicios">
+            <div class="container">
+                <h2>¿Quiénes somos y qué hacemos?</h2>
+                <p>Nuestra misión principal en <strong>Derecho de los Jóvenes</strong> es acercarte las herramientas del mundo de manera simple y directa
+				mediante reflexiones y comentarios de toda una comunidad joven.</p>
+                
+                <div class="grid-servicios">
+                    <!-- Tarjeta de servicio 1 (Quiénes Somos) -->
+                    <div class="card-servicio">
+                        <h3>👥 Quiénes Somos</h3>
+                        <p>Somos una comunidad activa de estudiantes comprometidos con traducir las normas y reglamentos a un lenguaje accesible para las nuevas generaciones.</p>
+                    </div>
+                    <!-- Tarjeta de servicio 2 (Derechos y Obligaciones) -->
+                    <div class="card-servicio">
+                        <h3>⚖️ Derechos y Obligaciones juveniles</h3>
+                        <p>Te enseñamos a identificar el pacto social mutuo: tus derechos a ser protegido y expresarte, y tus obligaciones civiles para aportar al entorno.</p>
+                    </div>
+                    <!-- Tarjeta de servicio 3 (Nuestra Idea) -->
+                    <div class="card-servicio">
+                        <h3>💡 Nuestra Idea</h3>
+                        <p>Buscamos el conocimiento armonico entre las personas. Queremos quitar el miedo hacia "las reglas" para que lo uses como una herramienta de socialización diario.</p>
+                    </div>
                 </div>
             </div>
-
-        </header>
-		<section class="py-5" id="services">
-            <div class="container py-5">
-			 
-                <div class="text-center mb-5" data-aos="fade-down">
-                    <h2 class="fw-bold display-8">Audios de Pensamientos y Reflexiones con "<i>Pódcast Joel</i>" </h2>
-                    <div class="mx-auto mt-2 mb-4" style="width: 100px; height: 5px; background: var(--primary-blue); border-radius: 10px;"></div>
-                </div>
-
-                <div class="row g-4 text-center">
-                    <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
-                        <div class="glass-card p-5 h-100">
-                            <div class="icon-circle"><i class="bi bi-code-slash"></i></div>
-                            <h3>Episodio 1</h3>
-                            <p class="text-muted">La Voz del Futuro que ya es Presente</p>
-							 <a href="https://open.spotify.com/episode/4vvsKxZy1FlgBpsuj1C774?si=y9gz_l46TzeNNnbsXrTY1A" class="btn btn-primary w-100 btn-action">Escuchar...</a>
+		
+			 <div class="container">
+                <h2>¿Por qué es importante este podcast?</h2>
+                <p>La información y opiniones. Este podcast es el puente que conecta el ideas con tu realidad cotidiana (escuela, sociedad) a través de nuestros episodios en audio.</p>
+                
+                <!-- Aquí simularás tu portafolio de episodios -->
+                <div class="grid-portafolio">
+                    <div class="podcast-item">
+                        <div class="podcast-cover">🎙️</div>
+                        <div class="podcast-body">
+                            <h3>Episodio 1: La Voz del Futuro que ya es Presente</h3>
+                             <a href="https://open.spotify.com/episode/4vvsKxZy1FlgBpsuj1C774?si=y9gz_l46TzeNNnbsXrTY1A" class="btn btn-primary w-100 btn-action">Escuchar...</a>
                         </div>
                     </div>
-
-                    <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
-                        <div class="glass-card p-5 h-100 border-primary shadow-sm">
-                            <div class="icon-circle"><i class="bi bi-display"></i></div>
-                            <h3>Episodio 2</h3>
-                            <p class="text-muted">Tu derecho a Cambiar el mundo</p>
-							 <a href="https://open.spotify.com/episode/74FpAh3IOQ0GImhG0vsfZG?si=1nBW2uQVSPmEGiwtafXKbA" class="btn btn-primary w-100 btn-action">Escuchar...</a>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3" data-aos="fade-up" data-aos-delay="500">
-                        <div class="glass-card p-5 h-100">
-                            <div class="icon-circle"><i class="bi bi-phone"></i></div>
-                            <h3>Episodio 3</h3>
-                            <p class="text-muted">Derechos obligaciones de Jovenes</p>
-							 <a href="https://open.spotify.com/episode/7Er4FFp8QMT00hzLwf6lGU?si=dlosr9aIR26VHAmtXabGrg" class="btn btn-primary w-100 btn-action">Escuchar...</a>
+                    <div class="podcast-item">
+                        <div class="podcast-cover">🎧</div>
+                        <div class="podcast-body">
+                            <h3>Episodio 2: Tu derecho a Cambiar el mundo </h3>
+                            <a href="https://open.spotify.com/episode/74FpAh3IOQ0GImhG0vsfZG?si=1nBW2uQVSPmEGiwtafXKbA" class="btn btn-primary w-100 btn-action">Escuchar...</a>
                         </div>
                     </div>
 					
-					 <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
-                        <div class="glass-card p-5 h-100">
-                            <div class="icon-circle"><i class="bi bi-clock"></i></div>
-                            <h3>Episodio 4</h3>
-                            <p class="text-muted">¿Que es la cultura de Paz?</p>
-							 <a href="https://open.spotify.com/episode/1rCIt6jPHkJopO1c5f8FFU?si=aeNRX6GWQGSVJLT8qPIjFg" class="btn btn-primary w-100 btn-action">Escuchar...</a>
+                </div>
+				<div class="grid-portafolio">
+				<div class="podcast-item">
+                        <div class="podcast-cover">🎙️</div>
+                        <div class="podcast-body">
+                            <h3>Episodio 3: Derechos obligaciones de Jovenes</h3>
+                             <a href="https://open.spotify.com/episode/4vvsKxZy1FlgBpsuj1C774?si=y9gz_l46TzeNNnbsXrTY1A" class="btn btn-primary w-100 btn-action">Escuchar...</a>
                         </div>
                     </div>
-					<br><br><br>
-					<div class="container">
-					<br><br><br>
+                    <div class="podcast-item">
+                        <div class="podcast-cover">🎧</div>
+                        <div class="podcast-body">
+                            <h3>Episodio 4: ¿Que es la cultura de Paz? </h3>
+                            <a href="https://open.spotify.com/episode/74FpAh3IOQ0GImhG0vsfZG?si=1nBW2uQVSPmEGiwtafXKbA" class="btn btn-primary w-100 btn-action">Escuchar...</a>
+                        </div>
+                    </div>
+				 </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: PORTAFOLIO -->
+        <section id="portafolio">
+           	 <div id="videos" class="hub-content-display">
+					 <div class="container my-5"> 
+        <h2 class="text-center mb-4">Juventud & Derecho Joel Video Comunidades Virtuales</h2>
+
+        <!-- Contenedor para centrar el video y limitar su ancho máximo -->
         <div class="row justify-content-center">
-            <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+            <div class="col-md-8 col-lg-6">
+                
+                <!-- Clase de Bootstrap para hacer el video responsivo (proporción 16:9) -->
+                <div class="ratio ratio-16x9 shadow rounded overflow-hidden">
+                    <video controls>
+                        <!-- Cambia "mi-video.mp4" por el nombre de tu archivo -->
+                        <source src="videos/UsoresponsableIA_ Buenaspracticas.mp4" type="video/mp4">
+                        Tu navegador no soporta la reproducción de video.
+                    </video>
+                </div>
+
+            </div>
+        </div>
+    </div>
+	
+       
+      
+    </div>
+        </section>
+        
+         <!-- SECCIÓN: CONTACTO -->
+        <section id="contacto">
+            <div class="container">
+                <h2>Contacto</h2>
+                <p>¿Tienes dudas legales, sugerencias de temas o quieres contar tu caso para el programa?</p>
+                
+                <div class="contacto-wrapper">
+                    <!-- Formulario de contacto -->
+              <div class="row justify-content-center">
+            <div class="col-12 col-sm-8">
                 
                 <div class="card profile-card shadow-sm p-4 text-center">
                     <div class="card-body">
@@ -296,72 +453,29 @@
                 </div>
                 </div>
         </div>
-    </div>
-					
-					 <div id="videos" class="hub-content-display">
-					 <div class="container my-5">
-        <h2 class="text-center mb-4">VIDEO  JOEL-> CASI ADULTOS</h2>
 
-        <!-- Contenedor para centrar el video y limitar su ancho máximo -->
-        <div class="row justify-content-center">
-            <div class="col-md-8 col-lg-6">
-                
-                <!-- Clase de Bootstrap para hacer el video responsivo (proporción 16:9) -->
-                <div class="ratio ratio-16x9 shadow rounded overflow-hidden">
-                    <video controls>
-                        <!-- Cambia "mi-video.mp4" por el nombre de tu archivo -->
-                        <source src="videos/UsoresponsableIA_ Buenaspracticas.mp4" type="video/mp4">
-                        Tu navegador no soporta la reproducción de video.
-                    </video>
+                    <!-- Cuadro informativo (Aquí si te escuchamos) -->
+                    <div class="info-contacto">
+                        <h3>Contacto Directo</h3>
+                        <p>Nos encanta debatir y responder casos reales en el correo.</p>
+						<center><a href="mailto:1fjoeltovartec30@gmail.com">1fjoeltovartec30@gmail.com</a></center>
+                        <a href="mailto:1fjoeltovartec30@gmail.com?subject=Contacto%20desde%20la%20Web" 
+   class="btn btn-primary btn-lg w-100 d-flex align-items-center justify-content-center gap-2 rounded-pill shadow-sm mt-3">
+    <i class="bi bi-envelope-fill"></i> Enviar Correo
+</a>
+                        <div class="highlight-box">
+                            <h4>📢 ¡Aquí sí te escuchamos!</h4>
+                            <p>Tus problemas e historias reales son el motor de cada episodio. ¡Escríbenos y hagamos valer tus derechos juntos!</p>
+                        </div>
+                    </div>
                 </div>
-
-            </div>
-        </div>
-    </div>
-	
-       
-      
-    </div>
-</div>
-					
-				
-                </div>
-				
-				
             </div>
         </section>
-		
-		<!--------------------------------------------------------- /Contacto---------------------------------------------------------------->
-        <footer class="footer mt-5">
-            <div class="container text-center">
-                <p class="mb-0">Copyright © 2026 Joel Tovar. Todos los derechos reservados.</p>
-                <div class="mt-3">
-                    <a href="#" class="text-white-50 me-3 text-decoration-none">Privacidad</a>
-                    <a href="#" class="text-white-50 text-decoration-none">Términos</a>
-                </div>
-            </div>
-        </footer>
-</body>
-	
-<html>
-
-
+        
+    </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-        <script>
-            // Inicializar AOS
-            AOS.init({
-                duration: 1000,
-                once: true
-            });
-
-            // Forzar el autoplay del video (algunos navegadores lo bloquean)
-            window.addEventListener('load', function () {
-                var video = document.getElementById('bg-video');
-                video.play().catch(function (error) {
-                    console.log("El video no pudo reproducirse automáticamente.");
-                });
-            });
-        </script>
-		
+    
+</body>
+</html>
